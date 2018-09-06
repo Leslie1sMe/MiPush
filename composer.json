@@ -1,0 +1,20 @@
+{
+  "name": "leslie/mipush",
+  "description": "\"小米推送composer\"",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lizhonglin",
+      "email": "lizhonglin_melody@yeah.net"
+    }
+  ],
+  "require": {
+    "php": ">5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leslie\\Mipush\\": "src/",
+      "Leslie\\Push\\": "Push/"
+    }
+  }
+}
