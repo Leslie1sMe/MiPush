@@ -14,7 +14,7 @@ use Leslie\Push\TargetedMessage;
 class MiPush
 {
 
-    public static function sendMessage($secret, $package, $regId, $title, $desc, $payload, $num, $gid,$kid)
+    public static function sendMessage($secret, $package, $regId, $title, $desc, $payload, $num, $gid, $kid, $pid)
     {
 
         Constants::setPackage($package);
@@ -30,6 +30,7 @@ class MiPush
         $message1->extra('type', $num); // 额外参数
         $message1->extra('gid', $gid); // 额外参数
         $message1->extra('kid', $kid); // 额外参数
+        $message1->extra('pid', $pid); // 额外参数
         $message1->notifyId(2); // 通知类型。最多支持0-4 5个取值范围，同样的类型的通知会互相覆盖，不同类型可以在通知栏并存
         $message1->build();
         $targetMessage = new TargetedMessage();
